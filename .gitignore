@@ -1,0 +1,25 @@
+# Dependency directories
+node_modules
+package-lock.json
+build
+
+# Sqlite databases
+*.sqlite3
+
+
+coverage
+
+# misc
+.DS_Store
+.env
+.history
+
+# TypeScript
+*.tsbuildinfo
+
+# Visual Studio Code settings
+.vscode/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

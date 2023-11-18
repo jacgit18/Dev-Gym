@@ -1,0 +1,68 @@
+{
+  "name": "dev-gym",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
+    "cbs": "npm run build && npm run start",
+    "start": "node ./build/src/app.js",
+    "clean": "rm -rf build",
+    "build": "npm run clean && npm run compile-ts",
+    "compile-ts": "tsc --project ./",
+    "compile-ts-watch-mode": "tsc -w --project ./",
+    "test": "mocha test/**/*.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "debug": "~2.6.9",
+    "readline-sync": "^1.4.10"
+  },
+
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/benchmark": "^2.1.5",
+    "@types/node": "^20.8.9",
+    "@types/readline-sync": "^1.4.7",
+    "benchmark": "^2.1.4",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "node": "^21.1.0",
+    "nodemon": "^3.0.1",
+    "resolve-cwd": "^3.0.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+
+  "types": "tsconfig.json",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "mocha": {
+    "extension": [
+      "ts"
+    ],
+    "spec": [
+      "test/**/*.spec.js"
+    ]
+  }
+
+}

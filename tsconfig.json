@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "moduleResolution": "node"
+  },
+  "types": ["benchmark"],
+  "include": ["src/**/*.ts", "lib/benchmark-helper.ts", "**/*.test.js", "**/*.spec.js", "test/_Optimal/SlidingWindow/lc209.spec.js"],
+  "exclude": ["node_modules"]
+}
